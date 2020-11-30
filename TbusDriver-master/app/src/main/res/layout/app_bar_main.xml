@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/allView">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/allInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_heightPercent="17.5%"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/instruction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_heightPercent="60%"
+            android:background="@color/cardview_light_background"
+            >
+            <TextView
+                android:id="@+id/textFirstInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="75%"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/instructionColor"
+                android:textSize="50dp"
+                android:gravity="center"
+                />
+            <ImageView
+                android:id="@+id/imageFirstInstruction"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                app:layout_widthPercent="25%"
+                />
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/smallInstruction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="35%"
+            app:layout_heightPercent="40%"
+            android:background="@color/cardview_light_background"
+            android:layout_below="@+id/instruction">
+            <TextView
+                android:id="@+id/textSecondInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="then"
+                android:textSize="25dp"
+                app:layout_widthPercent="50%"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/instructionColor"
+                android:gravity="center"
+                />
+            <ImageView
+                android:id="@+id/imageSecondInstruction"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                app:layout_widthPercent="50%"
+                />
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_main" />
+
+    </LinearLayout>
+</android.support.percent.PercentRelativeLayout>
+
